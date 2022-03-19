@@ -1,0 +1,13 @@
+from . import models
+from django.contrib.auth.models import User
+from rest_framework import viewsets
+from . import serializers
+from rest_framework import generics
+from rest_framework import permissions
+from django_filters import rest_framework as filters
+
+
+class ProblemeViewSet (viewsets.ModelViewSet):
+    queryset = models.Probleme.objects.filter(status=True)
+    serializer_class = serializers.ProblemeSerializer
+    filter_fields = ('nom_prenom',)
