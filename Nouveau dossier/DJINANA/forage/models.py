@@ -27,8 +27,8 @@ class EtatEau(models.Model):
 
     # Création des différents champs
     CHOIX = [
-    ('P', 'POTABLE'),
-    ('D', 'DANGE'),
+    ('POTABLE', 'P'),
+    ('DANGE', 'D'),
     ]
     choix = models.CharField(max_length=20, choices=CHOIX, default=None,blank=True, null=True)
 
