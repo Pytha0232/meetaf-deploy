@@ -15,9 +15,7 @@ class LocalisationForageSerializer(serializers.ModelSerializer):
 
     
 class EtatEauSerializer(serializers.ModelSerializer):
-    # etat = models.EtatEau.objects.filter(status=True)
-    # # if ph !=7:
-    #     # return 
+    def  
     class Meta:
         model = models.EtatEau
         fields = '__all__'
